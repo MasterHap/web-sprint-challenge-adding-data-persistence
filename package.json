@@ -23,6 +23,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "helmet": "^5.0.1",
-    "knex": "^1.0.1"
+    "knex": "^1.0.1",
+    "sqlite3": "^5.0.2"
   }
 }
