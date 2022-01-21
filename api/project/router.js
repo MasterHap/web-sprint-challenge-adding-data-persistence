@@ -1,5 +1,6 @@
 // build your `/api/projects` router here
 const express = require("express");
+const res = require("express/lib/response");
 const Project = require("./model");
 
 const router = express.Router();
@@ -8,6 +9,14 @@ router.get("/", (req, res, next) => {
   Project.find()
     .then((projects) => {
       res.json(projects);
+    })
+    .catch(next);
+});
+
+router.post("/", (req, res, next) => {
+  Project.add(req.body)
+    .then((project) => {
+      res.status(201).json(project);
     })
     .catch(next);
 });
