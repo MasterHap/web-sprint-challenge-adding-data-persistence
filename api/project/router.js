@@ -1,6 +1,5 @@
 // build your `/api/projects` router here
 const express = require("express");
-const res = require("express/lib/response");
 const Project = require("./model");
 
 const router = express.Router();
